@@ -36,7 +36,7 @@ public class PersonsList {
     }
 
     public void writeToFile(Person person) {
-        try (FileWriter writer = new FileWriter("person.txt")){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("person.txt"))) {
             writer.write(person.toString());
         } catch (IOException e) {
             System.err.println("Error writing to file: " + e.getMessage());
