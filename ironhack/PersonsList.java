@@ -14,6 +14,10 @@ public class PersonsList {
         persons = new ArrayList<>();
     }
 
+    public List<Person> getPersons() {
+        return persons;
+    }
+
 
     public Person findByName(String name){
         String[] nameParts = name.split(" ");
